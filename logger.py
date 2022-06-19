@@ -75,15 +75,16 @@ def func_log_path(path = LOG_PATH):
 
 # Основная программа
 
-# @func_log
-# def get_time(*args, **kwargs):
-#     return 'Now time is: ', datetime.now()
+if __name__ == '__main__':
 
-# @func_log_path(LOG_PATH)
-# def get_path(*args, **kwargs):
-#     return os.getcwd()
+    @func_log
+    def get_time(*args, **kwargs):
+        return 'Now time is: ', datetime.now()
 
-# if __name__ == '__main__':
-#     print(get_time('day', 1, [123, 124, None], False, {'a' : 1}, x = 123, y = [1, 2, 'Yes']))
-#     print(get_time())
-#     print(get_path('Give me a path'))
+    @func_log_path(LOG_PATH)
+    def get_path(*args, **kwargs):
+        return os.getcwd()
+
+    print(get_time('day', 1, [123, 124, None], False, {'a' : 1}, x = 123, y = [1, 2, 'Yes']))
+    print(get_time())
+    print(get_path('Give me a path'))
